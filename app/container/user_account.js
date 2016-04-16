@@ -6,14 +6,14 @@ var userAccount = React.createClass({
         if(this.props.routeParams.key){
             return( 
                 <div>
-                    <PromptContainer header={this.props.route.header} isPlayerTwo= "true"/>
+                    <PromptContainer header={this.props.route.header} isPlayerTwo= { true }/>
                 </div>
             )
         }
         else {
              return( 
                 <div>
-                    <PromptContainer header={this.props.route.header} isPlayerTwo= "false"/>
+                    <PromptContainer header={this.props.route.header} isPlayerTwo= { false }/>
                 </div>
             )
         }
@@ -42,7 +42,7 @@ var PromptContainer = React.createClass({
             userName: ''
         })
         this.setState.userName = '';
-        if(this.props.isPlayerTwo === 'true'){
+        if(this.props.isPlayerTwo === true){
              this.context.router.push('/battle')
         } else {
              this.context.router.push('/playertwo/' + this.state.userName)
