@@ -21,6 +21,8 @@ var userAccount = React.createClass({
 });
 
 
+// State component and its a container( means only business logic )
+
 var PromptContainer = React.createClass({
     contextTypes: {
         router: React.PropTypes.object.isRequired
